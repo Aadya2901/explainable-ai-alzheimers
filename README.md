@@ -1,66 +1,78 @@
 # 🧠 Explainable AI for Early Alzheimer’s Risk Detection
 
-An interpretable machine learning project that explores early Alzheimer’s disease risk detection using de-identified clinical and cognitive data, with a strong focus on transparency, ethics, and reproducibility.
+An interpretable machine learning project exploring **early Alzheimer’s risk detection** using **synthetic clinical and cognitive data**, with a strong emphasis on **transparency, ethics, and reproducibility**.
 
-This project was developed as part of the **AI 4 Alzheimer’s (Hack4Health)** hackathon.
+This project was developed as part of the **AI 4 Alzheimer’s (Hack4Health) Hackathon**.
 
 ---
 
 ## 📌 Project Overview
 
-Alzheimer’s disease is often diagnosed at a late stage, despite early warning signals being present in clinical and cognitive data. This project investigates how **machine learning models**, combined with **explainability techniques**, can support early risk analysis in a responsible and interpretable manner.
+Alzheimer’s disease is often diagnosed at a late stage, even though early warning signals may be present in cognitive and clinical indicators.
 
-Rather than acting as a diagnostic system, this work is intended to **support research and awareness** by highlighting patterns and contributing factors associated with Alzheimer’s risk.
+This project demonstrates how **machine learning models combined with explainability techniques** can support **early risk analysis** in a responsible and interpretable manner.
+
+⚠️ This system is **not a diagnostic tool**.  
+It is intended for **research, education, and awareness**, highlighting patterns and contributing factors associated with Alzheimer’s risk.
 
 ---
 
 ## 🎯 Objectives
 
-- Build machine learning models to classify cognitive states (CN / MCI / AD)
-- Compare baseline and advanced ML approaches
-- Emphasize **model interpretability** using feature importance and SHAP values
-- Ensure reproducibility through a clean, end-to-end notebook
-- Maintain ethical and non-diagnostic framing
+- Build machine learning models for **binary Alzheimer’s risk classification**
+- Compare a baseline linear model with a non-linear ensemble model
+- Emphasize **model interpretability** using feature importance analysis
+- Ensure **reproducibility** through a clean, end-to-end notebook
+- Maintain an **ethical and non-diagnostic framing**
 
 ---
 
 ## 📊 Dataset
 
-- De-identified clinical and cognitive dataset provided by the AI 4 Alzheimer’s hackathon
-- Includes demographic, cognitive assessment, and clinical features
-- Used strictly for research and educational purposes
+- **Synthetic clinical and cognitive dataset** generated for this project  
+- Designed to mimic real-world Alzheimer’s-related indicators:
+  - Age
+  - MMSE score
+  - Memory score
+  - Cognitive score
+- Target variable:
+  - `0` → No Alzheimer’s  
+  - `1` → Alzheimer’s  
+
+📌 No real patient data was used.
 
 ---
 
 ## 🛠️ Methodology
 
-1. **Data Preprocessing**
-   - Handling missing values
-   - Feature normalization
-   - Train–test split with stratification
+### Data Preprocessing
+- Handling missing values  
+- Feature normalization (for linear models)  
+- Stratified train–test split  
 
-2. **Modeling**
-   - Logistic Regression (baseline)
-   - Random Forest Classifier
-   - Gradient Boosting / XGBoost
+### Modeling
+- **Logistic Regression** (baseline model)  
+- **Random Forest Classifier** (advanced, non-linear model)  
 
-3. **Evaluation**
-   - Accuracy
-   - Precision & Recall
-   - Confusion Matrix
-   - ROC-AUC (where applicable)
+### Evaluation
+- Accuracy  
+- Precision, Recall, F1-score  
+- Confusion Matrix  
+- ROC-AUC score  
 
-4. **Explainability**
-   - Feature importance analysis
-   - SHAP (SHapley Additive exPlanations) for global and individual predictions
+### Explainability
+- Random Forest **feature importance analysis**  
+- SHAP (SHapley Additive exPlanations) explored for interpretability  
+  *(visualization limited due to execution environment constraints)*  
 
 ---
 
 ## 📈 Key Results
 
-- Tree-based models outperformed linear baselines
-- Cognitive assessment scores and age-related features showed strong influence
-- SHAP analysis provided clear, interpretable explanations for predictions
+- Tree-based models outperformed linear baselines  
+- Cognitive and memory-related features showed strong influence  
+- Feature importance analysis improved transparency and interpretability  
+- Performance is limited due to synthetic data, but the pipeline demonstrates a complete and ethical ML workflow  
 
 ---
 
@@ -73,15 +85,13 @@ Rather than acting as a diagnostic system, this work is intended to **support re
 └── report.pdf
 ```
 
-
 ---
 
 ## 🚀 How to Run
 
 ### Option 1: Google Colab (Recommended)
-1. Open the notebook in Google Colab
-2. Upload the dataset or mount Google Drive
-3. Run all cells sequentially
+1. Open the notebook in Google Colab  
+2. Run all cells sequentially 
 
 ### Option 2: Local Setup
 
@@ -114,7 +124,7 @@ All predictions should be interpreted by qualified healthcare professionals.
 
 ## 🔮 Future Work
 
-- Incorporate additional public Alzheimer’s datasets  
+- Incorporate additional public Alzheimer’s datasets (e.g., OASIS, ADNI)
 - Explore longitudinal modeling for disease progression  
 - Improve uncertainty estimation and calibration  
 - Collaborate with domain experts for clinical validation  
